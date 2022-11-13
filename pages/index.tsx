@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Button } from "@chakra-ui/react";
+import { signIn } from "next-auth/react";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +14,7 @@ const Home: NextPage = () => {
 
       <main>
         <h1>Church Backend</h1>
+        <Button onClick={() => signIn()}>Sign in</Button>
       </main>
     </div>
   );
